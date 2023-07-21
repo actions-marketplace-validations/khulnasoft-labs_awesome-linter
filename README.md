@@ -277,7 +277,6 @@ Check out this [snippet](https://gitlab.com/snippets/1988376)
 ### Visual Studio Code
 
 You can checkout this repository using [Container Remote Development](https://code.visualstudio.com/docs/remote/containers), and debug the linter using the `Test Linter` task.
-![Example](https://user-images.githubusercontent.com/15258962/85165778-2d2ce700-b21b-11ea-803e-3f6709d8e609.gif)
 
 We will also support [Github Codespaces](https://github.com/features/codespaces/) once it becomes available
 
