@@ -1,9 +1,9 @@
-#::::::::::::::::::::::: KHULNASOFT-LABS ::::::::::::::::::::::::
+#:::::::::::::::::::: KHULNASOFT-LABS ::::::::::::::::::::::::::#
 #       /~\                                                     #
 #      ( oo|                                                    #
 #      _\=/_                                                    #
 #  #  /  _   \                                                  #
-#  \\//|/@\|\\     Awsome-Linter Actions                        #
+#  \\//|/@\| \\    Awsome-Linter Actions                        #
 #   \/  \_/  ||    Lint your code with GitHub Actions base      #
 #      |\ /| ||    KhulnaSoft DevOps                            #
 #      \_ _/ #     https://khulnasoft.com                       #
@@ -251,7 +251,7 @@ ENV ACTIONS_RUNNER_DEBUG=${ACTIONS_RUNNER_DEBUG} \
     VALIDATE_XML=${VALIDATE_XML} \
     VALIDATE_YAML=${VALIDATE_YAML}
 
-# Copy scripts to container【 ❛︡ ͜ʖ ❛︠ 】#
+# Copy scripts to container【❛︡ ͜ʖ❛︠】#
 COPY lib /action/lib
 
 # Copy linter rules to container 【 ❛︡ ͜ʖ ❛︠ 】#
