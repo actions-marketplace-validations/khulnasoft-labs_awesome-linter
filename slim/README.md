@@ -2,14 +2,14 @@
 
 The **GitHub Awesome-Linter** maintains `two` major images:
 
-- `github/awesome-linter:v5`
-- `github/awesome-linter:slim-v5`
+- `khulnasoft-labs/awesome-linter:v5`
+- `khulnasoft-labs/awesome-linter:slim-v5`
 
 In order to help users pull this image more naturally, the `action.yml` in this directory can help users pull the `slim image`.
 
 ## Slim Image
 
-The slim `github/awesome-linter:slim-v5` comes with all supported linters but removes the following:
+The slim `khulnasoft-labs/awesome-linter:slim-v5` comes with all supported linters but removes the following:
 
 - `rust` linters
 - `dotenv` linters
@@ -26,7 +26,7 @@ Example usage:
 # Run Linter against code base #
 ################################
 - name: Lint Code Base
-  uses: github/awesome-linter/slim@v5
+  uses: khulnasoft-labs/awesome-linter/slim@v5
   env:
     VALIDATE_ALL_CODEBASE: false
     DEFAULT_BRANCH: main

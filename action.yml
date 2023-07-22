@@ -8,5 +8,5 @@ runs:
 branding:
   icon: 'check-square'
   color: 'white'
-# You can view https://github.com/github/awesome-linter#environment-variables
+# You can view https://github.com/khulnasoft-labs/awesome-linter#environment-variables
 # to see a comprehensive list of all environment variables that can be passed

@@ -1,11 +1,12 @@
+---
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 template: |
   # Changelog
   $CHANGES
-  
-  See details of [all code changes](https://github.com/khulnasoft-labs/awesome-linter/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION) since previous release 
-  
+
+  See details of [all code changes](https://github.com/khulnasoft-labs/awesome-linter/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION) since previous release
+
 categories:
   - title: '🚀 Features'
     labels:

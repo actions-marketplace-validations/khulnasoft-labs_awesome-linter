@@ -70,26 +70,26 @@ inspec-check: ## Validate inspec profiles
 		--chef-license=accept \
 		test/inspec/awesome-linter
 
-AWSOME_LINTER_TEST_CONTAINER_NAME := "awesome-linter-test"
-AWSOME_LINTER_TEST_CONTINER_URL := ''
+AWESOME_LINTER_TEST_CONTAINER_NAME := "awesome-linter-test"
+AWESOME_LINTER_TEST_CONTINER_URL := ''
 DOCKERFILE := ''
 IMAGE := ''
 ifeq ($(IMAGE),slim)
-	AWSOME_LINTER_TEST_CONTINER_URL := "ghcr.io/github/awesome-linter:slim"
+	AWESOME_LINTER_TEST_CONTINER_URL := "ghcr.io/khulnasoft-labs/awesome-linter:slim"
 	IMAGE := "slim"
 else
-	AWSOME_LINTER_TEST_CONTINER_URL := "ghcr.io/github/awesome-linter:standard"
+	AWESOME_LINTER_TEST_CONTINER_URL := "ghcr.io/khulnasoft-labs/awesome-linter:standard"
 	IMAGE := "standard"
 endif
 
 .PHONY: inspec
 inspec: inspec-check ## Run InSpec tests
-	LOCAL_IMAGE="$$(docker images $(AWSOME_LINTER_TEST_CONTINER_URL) |grep 'ghcr.io/khulnasoft-labs/awesome-linter')"; \
-	if [ "$$?" -ne 0 ]; then docker build -t $(AWSOME_LINTER_TEST_CONTINER_URL) -f Dockerfile .; fi && \
-	DOCKER_CONTAINER_STATE="$$(docker inspect --format "{{.State.Running}}" "$(AWSOME_LINTER_TEST_CONTAINER_NAME)" 2>/dev/null || echo "")"; \
-	if [ "$$DOCKER_CONTAINER_STATE" = "true" ]; then docker kill "$(AWSOME_LINTER_TEST_CONTAINER_NAME)"; fi && \
-	docker tag $(AWSOME_LINTER_TEST_CONTINER_URL) $(AWSOME_LINTER_TEST_CONTAINER_NAME) && \
-	AWSOME_LINTER_TEST_CONTAINER_ID="$$(docker run -d --name "$(AWSOME_LINTER_TEST_CONTAINER_NAME)" --rm -it --entrypoint /bin/ash "$(AWSOME_LINTER_TEST_CONTAINER_NAME)" -c "while true; do sleep 1; done")" \
+	LOCAL_IMAGE="$$(docker images $(AWESOME_LINTER_TEST_CONTINER_URL) |grep 'ghcr.io/khulnasoft-labs/awesome-linter')"; \
+	if [ "$$?" -ne 0 ]; then docker build -t $(AWESOME_LINTER_TEST_CONTINER_URL) -f Dockerfile .; fi && \
+	DOCKER_CONTAINER_STATE="$$(docker inspect --format "{{.State.Running}}" "$(AWESOME_LINTER_TEST_CONTAINER_NAME)" 2>/dev/null || echo "")"; \
+	if [ "$$DOCKER_CONTAINER_STATE" = "true" ]; then docker kill "$(AWESOME_LINTER_TEST_CONTAINER_NAME)"; fi && \
+	docker tag $(AWESOME_LINTER_TEST_CONTINER_URL) $(AWESOME_LINTER_TEST_CONTAINER_NAME) && \
+	AWESOME_LINTER_TEST_CONTAINER_ID="$$(docker run -d --name "$(AWESOME_LINTER_TEST_CONTAINER_NAME)" --rm -it --entrypoint /bin/ash "$(AWESOME_LINTER_TEST_CONTAINER_NAME)" -c "while true; do sleep 1; done")" \
 	&& docker run $(DOCKER_FLAGS) \
 		--rm \
 		-v "$(CURDIR)":/workspace \
@@ -100,9 +100,9 @@ inspec: inspec-check ## Run InSpec tests
 		--chef-license=accept \
 		--diagnose \
 		--log-level=debug \
-		-t "docker://$${AWSOME_LINTER_TEST_CONTAINER_ID}" \
+		-t "docker://$${AWESOME_LINTER_TEST_CONTAINER_ID}" \
 	&& docker ps \
-	&& docker kill "$(AWSOME_LINTER_TEST_CONTAINER_NAME)"
+	&& docker kill "$(AWESOME_LINTER_TEST_CONTAINER_NAME)"
 
 .phony: docker
 docker:
@@ -112,4 +112,4 @@ docker:
 		--build-arg BUILD_REVISION=$(shell git rev-parse --short HEAD) \
 		--build-arg BUILD_VERSION=$(shell git rev-parse --short HEAD) \
 		--secret id=GITHUB_TOKEN,env=GITHUB_TOKEN \
-		-t ghcr.io/github/awesome-linter .
+		-t ghcr.io/khulnasoft-labs/awesome-linter .

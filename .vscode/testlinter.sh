@@ -4,16 +4,22 @@
 # You can also use ln -s /path /tmp/lint as an alternative
 # If you do neither, this will default to running against the test automation files
 
-# GLOBALS 【 ❛︡ ͜ʖ ❛︠ 】#
+###########
+# GLOBALS #
+###########
 CODE_PATH='/tmp/lint' # Path to code base
 
-# Check the path 【 ❛︡ ͜ʖ ❛︠ 】#
+##################
+# Check the path #
+##################
 if [ ! -L ${CODE_PATH} ]; then
   # Create symbolic link
   ln -s "${PWD}"/.automation/test ${CODE_PATH}
 fi
 
-# Export to run locally 【 ❛︡ ͜ʖ ❛︠ 】#
+#########################
+# Export to run locally #
+#########################
 export RUN_LOCAL=true
 
 # shellcheck source=/dev/null
