@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ################################################################################
-############# Cleanup Image on DockerHub @admiralawkbar ########################
+############# Cleanup Image on DockerHub @sulaiman-coder ########################
 ################################################################################
 
 # NOTES: This script is used to remove a tagged image on DockerHub

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ################################################################################
-############# Deploy Container to DockerHub @admiralawkbar #####################
+############# Deploy Container to DockerHub @sulaiman-coder #####################
 ################################################################################
 
 # NOTES: This script is used to upload a Dockerfile to DockerHub

@@ -2,7 +2,7 @@
 
 ################################################################################
 ################################################################################
-########### Awesome-Linter linting Functions @admiralawkbar ######################
+########### Awesome-Linter linting Functions @sulaiman-coder ######################
 ################################################################################
 ################################################################################
 ########################## FUNCTION CALLS BELOW ################################
@@ -13,7 +13,7 @@ DetectActions() {
 
   debug "Checking if ${FILE} is a GitHub Actions file..."
 
-  # Check if in the users .github, or the super linter test suite
+  # Check if in the users .github, or the awesome linter test suite
   if [[ "$(dirname "${FILE}")" == *".github/workflows"* ]] || [[ "$(dirname "${FILE}")" == *".automation/test/github_actions"* ]]; then
     debug "${FILE} is GitHub Actions file."
     return 0
