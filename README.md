@@ -443,11 +443,20 @@ Example workflow:
 
 ```yml
 ---
-#################################
-#################################
-## Awesome Linter GitHub Actions ##
-#################################
-#################################
+#:::::::::::::::::::: KHULNASOFT-LABS ::::::::::::::::::::::::::#
+#       /~\                                                     #
+#      ( oo|                                                    #
+#      _\=/_                                                    #
+#  #  /  _   \                                                  #
+#  \\//|/@\| \\    Awsome-Linter Actions                        #
+#   \/  \_/  ||    Lint your code with GitHub Actions base      #
+#      |\ /| ||    KhulnaSoft DevOps                            #
+#      \_ _/ #     https://khulnasoft.com                       #
+#      | | |       info@khulnasoft.com                          #
+#      | | |                                                    #
+#      []|[]                                                    #
+#      | | |                                                    #
+#_____/_]_[_\____________ 【 ❛︡ ͜ʖ ❛︠ 】____________________________#
 name: Lint Code Base
 
 #############################
@@ -548,7 +557,6 @@ Check out this [snippet](https://gitlab.com/snippets/1988376) and this Guided Ex
 ### Codespaces and Visual Studio Code
 
 You can checkout this repository using [GitHub Codespaces](https://github.com/features/codespaces/) and [Container Remote Development](https://code.visualstudio.com/docs/remote/containers), and debug the linter using the `Test Linter` task.
-![Example](https://user-images.githubusercontent.com/15258962/85165778-2d2ce700-b21b-11ea-803e-3f6709d8e609.gif)
 
 ### SSL Certs
 
