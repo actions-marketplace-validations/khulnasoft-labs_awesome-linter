@@ -444,7 +444,7 @@ Header() {
   info "---------------------------------------------"
   info "---------------------------------------------"
   info "The Awesome-Linter source code can be found at:"
-  info " - https://github.com/github/awesome-linter"
+  info " - https://github.com/khulnasoft-labs/awesome-linter"
   info "---------------------------------------------"
 }
 ################################################################################

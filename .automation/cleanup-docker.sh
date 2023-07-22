@@ -67,7 +67,7 @@ ValidateInput() {
     # No repo was pulled
     error "Failed to get [IMAGE_REPO]!"
     fatal "[${IMAGE_REPO}]"
-  elif [[ ${IMAGE_REPO} == "github/awesome-linter" ]]; then
+  elif [[ ${IMAGE_REPO} == "khulnasoft-labs/awesome-linter" ]]; then
     # Found our main repo
     info "Successfully found:[IMAGE_REPO], value:[${IMAGE_REPO}]"
   else
