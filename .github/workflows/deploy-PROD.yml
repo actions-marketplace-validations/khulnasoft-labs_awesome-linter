@@ -45,11 +45,11 @@ jobs:
       - name: Deploy latest image to DockerHub
         env:
           # Set the Env Vars
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_USERNAME: ${{ github.actor }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           IMAGE_REPO: khulnasoft-labs/awesome-linter
           IMAGE_VERSION: latest
           DOCKERFILE_PATH: Dockerfile
-          REGISTRY: Docker
+          REGISTRY: ghcr.io
         shell: bash
         run: .automation/upload-docker.sh
