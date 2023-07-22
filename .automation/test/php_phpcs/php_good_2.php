@@ -8,7 +8,7 @@ function helloName(string $name): array
     return ["hello", $name];
 }
 
-function helloSuperLinter(): void
+function helloAwesomeLinter(): void
 {
     $hello = helloName("Awesome-Linter");
     echo implode(" ", $hello) . PHP_EOL;
