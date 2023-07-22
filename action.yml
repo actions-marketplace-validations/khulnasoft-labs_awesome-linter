@@ -4,7 +4,7 @@ author: 'GitHub'
 description: 'It is a simple combination of various linters, written in bash, to help validate your source code.'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/awesome-linter/awesome-linter:v5'
+  image: 'docker://ghcr.io/khulnasoft-labs/awesome-linter:v5'
 branding:
   icon: 'check-square'
   color: 'white'

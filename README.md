@@ -1,6 +1,6 @@
 # Awesome-Linter
 
-**NOTICE**: If your use of the awesome-linter action failed around April 26th, 2023, we changed the organization name from `github` to `awesome-linter` so you will need to update your references to this action from `khulnasoft-labs/awesome-linter` to `awesome-linter/awesome-linter`.
+**NOTICE**: If your use of the awesome-linter action failed around April 26th, 2023, we changed the organization name from `github` to `awesome-linter` so you will need to update your references to this action from `khulnasoft-labs/awesome-linter` to `khulnasoft-labs/awesome-linter`.
 
 This repository is for the **GitHub Action** to run a **Awesome-Linter**.
 It is a simple combination of various linters, written in `bash`, to help validate your source code.
@@ -116,7 +116,7 @@ To use this **GitHub** Action you will need to complete the following:
 3. Commit that file to a new branch
 4. Open up a pull request and observe the action working
 5. Enjoy your more _stable_, and _cleaner_ codebase
-6. Check out the [Wiki](https://github.com/awesome-linter/awesome-linter/wiki) for customization options
+6. Check out the [Wiki](https://github.com/khulnasoft-labs/awesome-linter/wiki) for customization options
 
 **NOTE:** If you pass the _Environment_ variable `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` in your workflow, then the **GitHub Awesome-Linter** will mark the status of each individual linter run in the Checks section of a pull request. Without this you will only see the overall status of the full run. There is no need to set the **GitHub** Secret as it is automatically set by GitHub, it only needs to be passed to the action.
 
@@ -184,7 +184,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: awesome-linter/awesome-linter@v5
+        uses: khulnasoft-labs/awesome-linter@v5
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
@@ -195,7 +195,7 @@ jobs:
 
 You can show Awesome-Linter status with a badge in your repository README
 
-[![GitHub Awesome-Linter](https://github.com/awesome-linter/awesome-linter/actions/workflows/ci.yml/badge.svg)](https://github.com/marketplace/actions/awesome-linter)
+[![GitHub Awesome-Linter](https://github.com/khulnasoft-labs/awesome-linter/actions/workflows/ci.yml/badge.svg)](https://github.com/marketplace/actions/awesome-linter)
 
 Format:
 
@@ -206,7 +206,7 @@ Format:
 Example:
 
 ```markdown
-[![GitHub Awesome-Linter](https://github.com/awesome-linter/awesome-linter/actions/workflows/ci.yml/badge.svg)](https://github.com/marketplace/actions/awesome-linter)
+[![GitHub Awesome-Linter](https://github.com/khulnasoft-labs/awesome-linter/actions/workflows/ci.yml/badge.svg)](https://github.com/marketplace/actions/awesome-linter)
 ```
 
 ### Images
@@ -216,12 +216,12 @@ After further investigation, we were able to see that a few linters were very di
 This allows users to choose which **Awesome-Linter** they want to run and potentially speed up their build time.
 The available images:
 
-- `awesome-linter/awesome-linter:v5`
-- `awesome-linter/awesome-linter:slim-v5`
+- `khulnasoft-labs/awesome-linter:v5`
+- `khulnasoft-labs/awesome-linter:slim-v5`
 
 #### Standard Image
 
-The standard `awesome-linter/awesome-linter:v5` comes with all supported linters.
+The standard `khulnasoft-labs/awesome-linter:v5` comes with all supported linters.
 Example usage:
 
 ```yml
@@ -229,7 +229,7 @@ Example usage:
 # Run Linter against code base #
 ################################
 - name: Lint Code Base
-  uses: awesome-linter/awesome-linter@v5
+  uses: khulnasoft-labs/awesome-linter@v5
   env:
     VALIDATE_ALL_CODEBASE: false
     DEFAULT_BRANCH: master
@@ -238,7 +238,7 @@ Example usage:
 
 #### Slim Image
 
-The slim `awesome-linter/awesome-linter:slim-v5` comes with all supported linters but removes the following:
+The slim `khulnasoft-labs/awesome-linter:slim-v5` comes with all supported linters but removes the following:
 
 - `rust` linters
 - `dotenv` linters
@@ -255,7 +255,7 @@ Example usage:
 # Run Linter against code base #
 ################################
 - name: Lint Code Base
-  uses: awesome-linter/awesome-linter/slim@v5
+  uses: khulnasoft-labs/awesome-linter/slim@v5
   env:
     VALIDATE_ALL_CODEBASE: false
     DEFAULT_BRANCH: master
@@ -420,7 +420,7 @@ But if you wish to select or exclude specific linters, we give you full control 
 You can use the **GitHub** **Awesome-Linter** _with_ or _without_ your own personal rules sets. This allows for greater flexibility for each individual codebase. The Template rules all try to follow the standards we believe should be enabled at the basic level.
 
 - Copy **any** or **all** template rules files from `TEMPLATES/` into the `.github/linters/` directory of your repository, and modify them to suit your needs.
-  - The rules files in [this repository's `TEMPLATE` folder](https://github.com/awesome-linter/awesome-linter/tree/main/TEMPLATES) will be used as defaults should any be omitted.
+  - The rules files in [this repository's `TEMPLATE` folder](https://github.com/khulnasoft-labs/awesome-linter/tree/main/TEMPLATES) will be used as defaults should any be omitted.
 
 ### Using your own rules files
 
@@ -428,7 +428,7 @@ If your repository contains your own rules files that live outside of a `.github
 
 ### Disabling rules
 
-If you need to disable certain _rules_ and _functionality_, you can view [Disable Rules](https://github.com/awesome-linter/awesome-linter/blob/main/docs/disabling-linters.md)
+If you need to disable certain _rules_ and _functionality_, you can view [Disable Rules](https://github.com/khulnasoft-labs/awesome-linter/blob/main/docs/disabling-linters.md)
 
 ### Using your own SSH key
 
@@ -487,7 +487,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: awesome-linter/awesome-linter@v5
+        uses: khulnasoft-labs/awesome-linter@v5
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
@@ -533,7 +533,7 @@ The **Docker** container that is built from this repository is located at [khuln
 
 ### Local (troubleshooting/debugging/enhancements)
 
-If you find that you need to run awesome-linter locally, you can follow the documentation at [Running awesome-linter locally](https://github.com/awesome-linter/awesome-linter/blob/main/docs/run-linter-locally.md)
+If you find that you need to run awesome-linter locally, you can follow the documentation at [Running awesome-linter locally](https://github.com/khulnasoft-labs/awesome-linter/blob/main/docs/run-linter-locally.md)
 
 Check out the [note](#how-it-works) in **How it Works** to understand more about the **Awesome-Linter** linting locally versus via continuous integration.
 
@@ -560,7 +560,7 @@ Once found, it will load the certificate contents to a file, and to the trust st
 
 ```yml
 - name: Lint Code Base
-  uses: awesome-linter/awesome-linter@v5
+  uses: khulnasoft-labs/awesome-linter@v5
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     SSL_CERT_SECRET: ${{ secrets.ROOT_CA }}
@@ -576,10 +576,10 @@ Below are a list of the known limitations for the **GitHub Awesome-Linter**:
 
 ## How to contribute
 
-If you would like to help contribute to this **GitHub** Action, please see [CONTRIBUTING](https://github.com/awesome-linter/awesome-linter/blob/main/.github/CONTRIBUTING.md)
+If you would like to help contribute to this **GitHub** Action, please see [CONTRIBUTING](https://github.com/khulnasoft-labs/awesome-linter/blob/main/.github/CONTRIBUTING.md)
 
 ---
 
 ### License
 
-- [MIT License](https://github.com/awesome-linter/awesome-linter/blob/main/LICENSE)
+- [MIT License](https://github.com/khulnasoft-labs/awesome-linter/blob/main/LICENSE)
