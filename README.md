@@ -133,7 +133,7 @@ This file should have the following code:
 ---
 #################################
 #################################
-## Super Linter GitHub Actions ##
+## Awesome Linter GitHub Actions ##
 #################################
 #################################
 name: Lint Code Base
@@ -445,7 +445,7 @@ Example workflow:
 ---
 #################################
 #################################
-## Super Linter GitHub Actions ##
+## Awesome Linter GitHub Actions ##
 #################################
 #################################
 name: Lint Code Base
