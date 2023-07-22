@@ -1,0 +1,12 @@
+---
+name: 'Awsome-Linter slim'
+author: 'GitHub'
+description: 'It is a simple combination of various linters, written in bash, to help validate your source code.'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/khulnasoft-labs/awesome-linter:slim-v5.0.0'
+branding:
+  icon: 'check-square'
+  color: 'white'
+# You can view https://github.com/khulnasoft-labs/awesome-linter#environment-variables
+# to see a comprehensive list of all environment variables that can be passed
